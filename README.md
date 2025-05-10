@@ -23,9 +23,6 @@ Whether you're just starting out or trying to take your skills to the next level
 2. Explore the matching example in this repo  
 3. Run it, tweak it, break it — and learn by doing
 
-```bash
-git clone https://github.com/yourusername/js-youtube-examples.git
-cd js-youtube-examples
 
 ## Why It Matters
 
