@@ -33,32 +33,37 @@ console.log('This will finish first')
 
 
 
-// ------------------- DOWNLOADING FILES ------------------
-// This example simulates downloading files like images or documents from a server
-// Downloading files takes time, so it's returned as a promise
-function downloadFile(url) {
+// ------------------- LOADING IMAGES CONCURRENTLY ------------------
+// This example simulates loading image files from the internet
+// Loading images takes time, so it's handled with promises
+function loadImage(url) {
     // create a new promise which is handled in a separate area to run
     return new Promise(resolve => {
-        // setTimeout is used to simulate a delay, like a file downloading over a network
-        setTimeout(() => {
-            // after 2 seconds, the promise resolves with a message that the file is downloaded
-            resolve(`Downloaded file from ${url}`);
-        }, 2000); // 2-second delay
+        const img = new Image(); // create a new image element
+        img.onload = () => {
+            // when the image successfully loads, resolve the promise with a success message
+            resolve(`Loaded image from ${url}`);
+        };
+        img.onerror = () => {
+            // if loading fails, still resolve with an error message for simplicity
+            resolve(`Failed to load image from ${url}`);
+        };
+        img.src = url; // start loading the image
     });
 }
 
 // Each call returns a promise, which runs in the background
 // Our main code (synchronous part) continues running immediately
-downloadFile('file1.zip').then((data) => {
-    console.log(data) // logs after 2 seconds
-})
-downloadFile('file2.zip').then((data) => {
-    console.log(data) // logs after 2 seconds
-})
-downloadFile('file3.zip').then((data) => {
-    console.log(data) // logs after 2 seconds
-})
-// These downloads happen at the same time, not one after the other
+loadImage('https://via.placeholder.com/150').then((message) => {
+    console.log(message); // logs when image is loaded or fails
+});
+loadImage('https://via.placeholder.com/200').then((message) => {
+    console.log(message); // logs when image is loaded or fails
+});
+loadImage('https://via.placeholder.com/250').then((message) => {
+    console.log(message); // logs when image is loaded or fails
+});
+// These image loads happen at the same time, not one after the other
 
 
 
