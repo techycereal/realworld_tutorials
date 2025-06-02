@@ -1,3 +1,4 @@
+This is markdown
 # 🔒 Understanding Closures in JavaScript and React
 
 Closures are one of the most powerful—and sometimes tricky—concepts in JavaScript. This project demonstrates **how closures work** using:
