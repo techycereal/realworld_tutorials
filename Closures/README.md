@@ -84,13 +84,13 @@ export default Counter;
 
 🚀 **Try It Yourself**
 
-### JavaScript (Cart Example)
+### JavaScript (Closures Example)
 
-1. Save the cart code in a file named `cart.js`.
+1. Save the cart code in a file named `closures.js`.
 2. Run it using Node.js:
 
 ```bash
-node cart.js
+node closures.js
 ```
 
 💬 **Want to Learn More?**

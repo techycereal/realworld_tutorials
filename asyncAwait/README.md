@@ -120,12 +120,12 @@ sendAllEmails();
 
 ## How to Run
 
-1. Save the JavaScript code in a file (e.g., `async-examples.js`).
+1. Save the JavaScript code in a file (e.g., `asyncAwait.js`).
 
 2. Run it using Node.js:
 
 ```bash
-node async-examples.js
+node asyncAwait.js
 ```
 
 ## Why It Matters

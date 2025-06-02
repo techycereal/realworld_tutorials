@@ -131,7 +131,7 @@ Promise.allSettled([email1, email2, email3]).then(results => {
 ## 🚀 Try It Yourself ##
 To run the code:
 
-1. Save the full script in a file called promises-demo.js.
+1. Save the full script in a file called promisesFunctions.js.
 
 2. Make sure you have Node.js installed.
 

@@ -50,7 +50,7 @@ sendEmail("alex@example.com", "Hello Alex").then(data => console.log(data));
 
 To run the code:
 
-1. Save the script in a `.js` file (e.g., `promises-demo.js`).
+1. Save the script in a `.js` file (e.g., `promises.js`).
 2. Run it using Node.js:
 
 ```bash
